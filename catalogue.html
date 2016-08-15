@@ -7,30 +7,38 @@
   <body>
     <div class="main-container">
       <header class="main-header">
-        <ul>
-          <li>Информация</li>
-          <li>Фото и видео</li>
-          <li>Карта штата</li>
-          <li>Гостиницы</li>
-        </ul>
-        <img src="#" class="city-symbol" alt="city symbol" width="135px" height="50px">
+        <nav>
+          <ul>
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="index.html"><img src="#" class="city-symbol" alt="city symbol" width="135px" height="50px"></a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li><a href="#">Гостиницы</a></li>
+          </ul>
+        </nav>
       </header>
       <main>
         <div class="filters">
           <form class="hotel-filters" action="#" method="post">
-            <label>Инфраструктура:
-              <select name="infrastructure" multiple size="3">
-                <option value="Бассейн" selected>Бассейн</option>
-                <option value="Парковка">Парковка</option>
-                <option value="Wi-Fi">Wi-Fi</option>
-              </select>
+            <span>Инфраструктура:</span>
+            <label>
+              <input type="checkbox" name="pool" checked>Бассейн
             </label>
-            <label>Тип жилья:
-              <select name="accomodation" multiple size="3">
-                <option value="Гостиница" selected>Гостиница</option>
-                <option value="Мотель" selected>Мотель</option>
-                <option value="Апартаменты" selected>Апартаменты</option>
-              </select>
+            <label>
+              <input type="checkbox" name="parking">Парковка
+            </label>
+            <label>
+              <input type="checkbox" name="wi-fi">Wi-Fi
+            </label>
+            <span>Тип жилья:</span>
+            <label>
+              <input type="checkbox" name="hotel" checked>Гостиница
+            </label>
+            <label>
+              <input type="checkbox" name="motel" checked>Мотель
+            </label>
+            <label>
+              <input type="checkbox" name="apartments" checked>Апартаменты
             </label>
             <div>
               Стоимость в сутки (р):
