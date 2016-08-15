@@ -12,18 +12,17 @@
           <li>Фото и видео</li>
           <li>Карта штата</li>
           <li>Гостиницы</li>
+          <li><a href="index.html"><img src="#" class="city-symbol" alt="city symbol" width="135px" height="50px"></a></li>
         </ul>
-        <img src="#" class="city-symbol" alt="city symbol" width="135px" height="50px">
       </header>
       <main>
         <div class="main-picture">
-          <p class="welcome">Welcome<span>- to the gorgeous -</span></p>
-          <p class="sedona">
-            <h1>Sedona</h1>
-          </p>
+          <!--<p class="welcome">Welcome<span>- to the gorgeous -</span></p>
+          <h1>Sedona</h1>
           <p class="tagline">
             "Because the Grand Canyon sucks!"
-          </p>
+          </p>-->
+          <img src="#" alt="welcome" width="475px" height="350px">
         </div>
         <div class="main-picture-decoration">
         </div>
@@ -85,23 +84,23 @@
             <form class="find" action="index.html" method="post">
               <span>Поиск гостиницы в Седоне</span>
               <label>Дата заезда:
-                <select name="check-in-date">
-                  <option value="24.04.2016">24 апреля 2016</option>
-                </select>
+                <input type="date" name="check-in-date" value="24 апреля 2016">
               </label>
               <label>Дата выезда:
-                <select name="check-out-date">
-                  <option value="04.07.2016">4 июля 2016</option>
-                </select>
+                <input type="date" name="check-out-date" value="7 июля 2016">
               </label>
               <label>Взрослые:
-                <input type="button" name="grown-ups" value="2">
+                <input type="button" name="grown-ups" value="-">
+                <input type="number" name="grown-ups" value="2">
+                <input type="button" name="grown-ups" value="+">
               </label>
               <label>Дети:
-                <input type="button" name="children" value="0">
+                <input type="button" name="children" value="-">
+                <input type="number" name="children" value="0">
+                <input type="button" name="children" value="+">
               </label>
-              <input type="submit" name="find" value="Найти">
             </form>
+            <a href="search.html">Найти</a>
           </div>
         </div>
       </main>
