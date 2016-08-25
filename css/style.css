@@ -56,6 +56,29 @@ nav {
   background-color: #565655;
 }
 
+.filters {
+  height: 562px;
+  background-color: #ffb458;
+}
+
+.sorted-hotels {
+  background-color: white;
+}
+
+.next {
+  float: right;
+}
+
+.previous {
+  float:  right;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .main-picture img {
   background-color: #fc8fcd;
   width: 458px;
@@ -70,6 +93,23 @@ nav {
 
 .promo {
   background-color: #7590f3;
+}
+
+.hotel img {
+  float: left;
+}
+
+.rating {
+  float: right;
+}
+
+.hotel1,
+.hotel3 {
+  background-color: #91f1e0;
+}
+
+.hotel2 {
+  background-color: #d2d3f4;
 }
 
 .feature1 section {
@@ -127,7 +167,6 @@ nav {
 
 footer {
   background-color: pink;
-  clear: both;
 }
 
 footer div:nth-child(1) {
