@@ -1,5 +1,5 @@
 body {
-  font-family: "Verdana", "Ariel", sans-serif;
+  font-family: "PT Sans", "Ariel", sans-serif;
   font-size: 14px;
   line-height: normal;
   color: #1d1935;
@@ -7,30 +7,31 @@ body {
 }
 
 h1 {
-  font-family: "Tahoma", "Ariel", sans-serif;
+  font-family: "PT Sans", "Ariel", sans-serif;
   font-size: 18px;
   line-height: normal;
   color: #193803;
   font-weight: bold;
+  text-align: center;
 }
 
 h2 {
-  font-family: "PTSans", "Ariel", sans-serif;
+  font-family: "PT Sans", "Ariel", sans-serif;
   font-size: 21px;
   line-height: 26px;
   color: #193803;
   font-weight: bolder;
+  text-align: center;
 }
 
-ul,
-li {
-  float:left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+p {
+  text-align: center;
 }
 
 li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
   padding: 5px 10px;
   font: Bold 16px PTSans;
   background-color: white;
@@ -39,6 +40,8 @@ li {
 a {
   color: black;
   text-decoration: none;
+  font-family: "PT Sans", "Ariel", sans-serif;
+
 }
 
 .main-container {
@@ -84,6 +87,8 @@ nav {
   width: 458px;
   height: 352px;
   margin: 0 auto;
+  position: relative;
+  z-index: 52235;
 }
 
 .main-picture-decoration {
