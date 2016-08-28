@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <title>HTML Academy: Седона</title>
@@ -34,15 +35,17 @@
           <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
-        <div class="features feature1">
-          <section>
+        <div class="content-feature1 clearfix">
+          <div class="description">
             <h2>Настоящий городок</h2>
             <p>- №1 -</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          </section>
-          <img src="img/content-photo1.jpg" alt="настоящий городок" width="800px" height="256px">
+          </div>
+          <div class="image">
+            <img src="img/content-photo1.jpg" alt="настоящий городок" width="800px" height="256px">
+          </div>
         </div>
-        <div class="options">
+        <div class="content-options clearfix">
           <div class="apartments">
             <img src="img/house-icon.png" alt="жилье" width="100px" height="100px">
             <h2>Жилье</h2>
@@ -59,30 +62,34 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </div>
-        <div class="features feature2">
-          <img src="img/content-photo2.jpg" alt="мост дьявола" width="800px" height="256px">
-          <section>
+        <div class="content-feature2">
+          <div class="image">
+            <img src="img/content-photo2.jpg" alt="мост дьявола" width="800px" height="256px">
+          </div>
+          <div class="description">
             <h2>Там есть мост дьявола</h2>
             <p>- №2 -</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </section>
+          </div>
         </div>
-        <div class="feature3">
-          <h2>Небольшая площадь</h2>
-          <p>- №3 -</p>
-          <p>Все достопримечательности находятся очень близко</p>
+        <div class="content-3features clearfix">
+          <div class="content-feature3">
+            <h2>Небольшая площадь</h2>
+            <p>- №3 -</p>
+            <p>Все достопримечательности находятся очень близко</p>
+          </div>
+          <div class="content-feature4">
+            <h2>Красивая дорога</h2>
+            <p>- №4 -</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
+          <div class="content-feature5">
+            <h2>Мало туристов</h2>
+            <p>- №5 -</p>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
         </div>
-        <div class="feature4">
-          <h2>Красивая дорога</h2>
-          <p>- №4 -</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </div>
-        <div class="feature5">
-          <h2>Мало туристов</h2>
-          <p>- №5 -</p>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
-        </div>
-        <div class="find-hotel">
+        <div class="content-find-hotel">
           <b>Заинтересовались?</b>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне</p>
@@ -111,7 +118,7 @@
         </div>
       </main>
       <footer class="clearfix">
-        <div>
+        <div class="insta-tag">
           <b>#VISITSEDONA</b>
         </div>
         <div class="social-icons">
