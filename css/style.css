@@ -45,8 +45,14 @@ li img {
 }
 
 nav {
-  background-color: #457885;
+  background-color: #fff;
   text-align: center;
+  font-size: 0;
+}
+
+nav ul {
+  font-size: 0;
+  list-style: none;
 }
 
 nav li {
@@ -55,17 +61,44 @@ nav li {
   font-weight: bold;
   line-height: 26px;
   background-color: white;
-  list-style: none;
   display: inline-block;
   vertical-align: middle;
-  width: 220px;
+  width: 200px;
   text-align: center;
 }
 
+nav li a {
+  display: block;
+  margin: 15px;
+}
+
+nav li a:hover {
+  color: #81b3d2;
+}
+
+nav li:nth-child(1){
+  margin-right: 40px;
+}
+
+nav li:nth-child(2){
+  margin-right: 110px;
+}
+
 nav li:nth-child(3) {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 501px;
   z-index: 5;
+  margin-top: -15px;
   background-color: transparent;
+}
+
+nav li:nth-child(4){
+  margin-left: 110px;
+}
+
+nav li:nth-child(5){
+  margin-left: 40px;
 }
 
 p {
@@ -159,6 +192,15 @@ ul {
   margin: 50px 70px;
 }
 
+.content-promo {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.content-promo p {
+  margin-bottom: 50px;
+}
+
 .content-find-hotel {
   background-color: white;
   text-align: center;
@@ -179,18 +221,33 @@ ul {
 
 .main-container {
   width: 1200px;
-  background-color: #fcfb8f;
+  background-color: #fff;
   margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 15px 0 #dbdbdb;
 }
 
 .main-picture {
-  background-image: url("img/background-photo.png");
+  background-image: url("../img/background-photo.png");
+  background-color: #81b3d2;
   text-align: center;
+  width: 1200px;
+  height: 698px;
   margin: 0;
 }
 
+.main-picture-decoration {
+  margin-bottom: 50px;
+}
+
+.main-picture img {
+  width: 458px;
+  height: 352px;
+  margin-top: 75px;
+}
+
 .find-form {
-  background-image: url("img/map.png");
+  background-image: url("../img/map.png");
   background-color: pink;
 }
 
@@ -225,13 +282,6 @@ ul {
 
 .previous {
   float:  right;
-}
-
-.main-picture img {
-  background-color: #fc8fcd;
-  width: 458px;
-  height: 352px;
-  margin: 0 auto;
 }
 
 .main-picture-decoration {
