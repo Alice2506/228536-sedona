@@ -1,3 +1,4 @@
+/* Общие стили */
 
 body {
   font-family: "PT Sans", "Ariel", sans-serif;
@@ -9,26 +10,23 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
 }
-/*
-h1 {
-  font-family: "PT Sans", "Ariel", sans-serif;
-  font-size: 18px;
-  line-height: normal;
-  color: #193803;
-  font-weight: bold;
-  text-align: center;
-}
-*/
+
 a {
   color: black;
   text-decoration: none;
 }
 
-footer {
-  background-color: white;
+p {
   text-align: center;
-  padding: 35px 0;
+  text-transform: uppercase;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 h2 {
   font-family: "PT Sans", "Ariel", sans-serif;
@@ -37,85 +35,55 @@ h2 {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
-li img {
-  position: relative;
-  z-index: 99999999;
-}
+/* Стили для хедера */
 
-nav {
+.main-header {
   background-color: #fff;
   text-align: center;
-  font-size: 0;
 }
 
-nav ul {
+.main-header ul {
+  margin: 0;
+  padding: 0;
   font-size: 0;
   list-style: none;
 }
 
-nav li {
+.main-header li {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  text-align: center;
+}
+
+.main-header a {
+  padding: 15px 0;
   font-family: "PT Sans", "Ariel", sans-serif;
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
   background-color: white;
-  display: inline-block;
-  vertical-align: middle;
-  width: 200px;
-  text-align: center;
 }
 
-nav li a {
-  display: block;
-  margin: 15px;
-}
-
-nav li a:hover {
-  color: #81b3d2;
-}
-
-nav li:nth-child(1){
-  margin-right: 40px;
-}
-
-nav li:nth-child(2){
-  margin-right: 110px;
-}
-
-nav li:nth-child(3) {
-  position: absolute;
-  top: 0;
-  left: 501px;
-  z-index: 5;
-  margin-top: -15px;
+.main-header li:nth-child(3) a {
+  padding: 0;
+  margin-bottom: -50px;
   background-color: transparent;
 }
 
-nav li:nth-child(4){
-  margin-left: 110px;
+.main-header a {
+  display: block;
 }
 
-nav li:nth-child(5){
-  margin-left: 40px;
+.main-header img {
+  position: relative;
+  z-index: 10;
 }
 
-p {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .content-feature1 .description {
   width: 300px;
@@ -151,19 +119,7 @@ ul {
   background-color: #eee;
 }
 
-.content-feature3 {
-  width: 230px;
-  margin: 45px 85px;
-  float: left;
-}
-
-.content-feature4 {
-  width: 230px;
-  margin: 45px 85px;
-  float: left;
-}
-
-.content-feature5 {
+.content-3features div {
   width: 230px;
   margin: 45px 85px;
   float: left;
@@ -174,19 +130,7 @@ ul {
   text-align: center;
 }
 
-.content-options .apartments {
-  width: 260px;
-  float: left;
-  margin: 50px 70px;
-}
-
-.content-options .food {
-  width: 260px;
-  float: left;
-  margin: 50px 70px;
-}
-
-.content-options .souvenirs {
+.content-options div {
   width: 260px;
   float: left;
   margin: 50px 70px;
@@ -200,6 +144,44 @@ ul {
 .content-promo p {
   margin-bottom: 50px;
 }
+
+.main-container {
+  width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 15px 0 #dbdbdb;
+}
+
+.main-picture {
+  position: relative;
+  background-image: url("../img/background-photo.png");
+  background-color: #81b3d2;
+  text-align: center;
+  width: 1200px;
+  height: 510px;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.main-picture::after {
+  content: '';
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -50%;
+  background-image: url('../img/background-decoration.png')
+}
+
+.main-picture img {
+  width: 458px;
+  height: 352px;
+  margin-top: 75px;
+}
+
+/*Стили для контейнера с формой*/
 
 .content-find-hotel {
   background-color: white;
@@ -219,52 +201,59 @@ ul {
   padding: 30px 0;
 }
 
-.main-container {
-  width: 1200px;
-  background-color: #fff;
+.search-hotel {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #fff;
+  background-color: #766357;
+  width: 291px;
+  padding: 30px 138px;
   margin: 0 auto;
-  position: relative;
-  box-shadow: 0 0 15px 0 #dbdbdb;
-}
-
-.main-picture {
-  background-image: url("../img/background-photo.png");
-  background-color: #81b3d2;
-  text-align: center;
-  width: 1200px;
-  height: 698px;
-  margin: 0;
-}
-
-.main-picture-decoration {
-  margin-bottom: 50px;
-}
-
-.main-picture img {
-  width: 458px;
-  height: 352px;
-  margin-top: 75px;
 }
 
 .find-form {
   background-image: url("../img/map.png");
   background-color: pink;
+  width: 100%;
+  height: 593px;
+}
+
+.find-form form {
+  display: none;
+}
+
+/* Стили для футера */
+
+footer {
+  background-color: white;
+  text-align: center;
+  opacity: 0.5;
+}
+
+footer div {
+  width: 400px;
+  float: left;
+  padding: 35px 0;
+  background-color: transparent;
 }
 
 .insta-tag {
-  width: 400px;
-  float: left;
   font-family: "PT Sans", "Ariel", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
 }
 
-.social-icons {
-  width: 400px;
-  float: left;
+.developer span {
+   display: inline-block;
+   vertical-align: middle;
 }
 
+.developer img {
+   display: inline-block;
+   vertical-align: middle;
+}
 
 /*
 .filters {
