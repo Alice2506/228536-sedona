@@ -24,33 +24,34 @@
         <div class="filters cleafix">
           <form class="hotel-filters clearfix" action="#" method="post">
           <div class="infra">
-            <span>Инфраструктура:</span>
-            <label>
-              <input type="checkbox" name="pool" checked>Бассейн
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="parking">Парковка
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="wi-fi">Wi-Fi
-            </label>
+            <div>Инфраструктура:</div>
+            <div>
+              <input id="pool-field" type="checkbox" name="pool" checked>
+              <label for="pool-field">Бассейн</label>
+            </div>
+            <div>
+              <input id="parking-field" type="checkbox" name="parking">
+              <label for="parking-field">Парковка</label>
+            </div>
+            <div>
+              <input id="wifi-field" type="checkbox" name="wi-fi">
+              <label for="parking-field">Wi-Fi</label>
+            </div>
           </div>
           <div class="accom">
-            <span>Тип жилья:</span>
-            <br>
-            <label>
-              <input type="checkbox" name="hotel" checked>Гостиница
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="motel" checked>Мотель
-            </label>
-            <br>
-            <label>
-              <input type="checkbox" name="apartments" checked>Апартаменты
-            </label>
+            <div>Тип жилья:</div>
+            <div>
+              <input id="hotel-field" type="checkbox" name="hotel" checked>
+              <label for="hotel-field">Гостиница</label>
+            </div>
+            <div>
+              <input id="motel-field" type="checkbox" name="motel" checked>
+              <label for="motel-field">Мотель</label>
+            </div>
+            <div>
+              <input id="apartments-field" type="checkbox" name="apartments" checked>
+              <label for="apartments-field">Апартаменты</label>
+            </div>
           </div>
             <div class="filter-range">
               <div class="filter-range-title">Стоимость в сутки (р):</div>
@@ -76,11 +77,9 @@
           <a href="#">по типу</a>
           <a href="#">по рейтингу</a>
           <div class="buttons">
-            <button class="previous" type="button" name="previous">
-              <img src="#" width="15px" height="15px">
+            <button class="icon-up-dir" type="button" name="previous">
             </button>
-            <button class="next" type="button" name="next">
-              <img src="#" width="15px" height="15px">
+            <button class="icon-down-dir" type="button" name="next">
             </button>
           </div>
         </div>

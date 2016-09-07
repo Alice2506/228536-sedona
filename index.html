@@ -22,11 +22,6 @@
       </header>
       <main>
         <div class="main-picture">
-          <!--<p class="welcome">Welcome<span>- to the gorgeous -</span></p>
-          <h1>Sedona</h1>
-          <p class="tagline">
-            "Because the Grand Canyon sucks!"
-          </p>-->
           <img src="img/main-writing.png" alt="welcome" width="458px" height="352px">
         </div>
         <div class="content-promo">
@@ -60,7 +55,7 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </div>
-        <div class="content-feature2">
+        <div class="content-feature2 clearfix">
           <div class="image">
             <img src="img/content-photo2.jpg" alt="мост дьявола" width="800px" height="256px">
           </div>
@@ -88,10 +83,12 @@
           </div>
         </div>
         <div class="content-find-hotel">
-          <b>Заинтересовались?</b>
+          <div>Заинтересовались?</div>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне</p>
-          <div class="search-hotel">Поиск гостиницы в Седоне</div>
+          <div>
+            <a href="#">Поиск гостиницы в Седоне</a>
+          </div>
           <div class="find-form">
             <form class="find" action="index.html" method="post">
               <label>Дата заезда:
@@ -110,9 +107,10 @@
                 <input type="number" name="children" value="0">
                 <input type="button" name="children" value="+">
               </label>
-            </form>
             <a href="search.html">Найти</a>
+            </form>
           </div>
+          <div class="map"></div>
         </div>
       </main>
       <footer class="main-footer clearfix">
