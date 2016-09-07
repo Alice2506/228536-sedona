@@ -11,6 +11,46 @@ body {
   background-color: #f2f2f2;
 }
 
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-plus::before { content: "\e801"; } /* "" */
+.icon-minus::before { content: "\e802"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+
+
 a {
   color: black;
   text-decoration: none;
@@ -225,17 +265,18 @@ h2 {
 
 /* Стили для футера */
 
-footer {
+.main-footer {
   background-color: white;
   text-align: center;
-  /*opacity: 0.5;*/
+  margin-top: -108px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-footer div {
+.main-footer div {
   width: 400px;
   float: left;
   padding: 35px 0;
-  background-color: transparent;
+
 }
 
 .insta-tag {
@@ -258,13 +299,13 @@ footer div {
 
 /* Стили для внутренней страницы */
 
-/* Стили для слайдера */
+
 .filters {
   background: #81b3d2 url("../img/filter-background.png") no-repeat;
 }
 
 .hotel-filters {
-  display: flex;
+  /*display: flex;*/
 }
 
 .hotel-filters label {
@@ -277,21 +318,51 @@ footer div {
   color: white;
 }
 
-.infra {
-  width: 100px;
+.hotel-filters input[type="checkbox"] {
+  display: none;
+}
+
+.hotel-filters input[type="checkbox"] + label {
+  display: block;
+  line-height: 50px;
   margin: 25px 70px;
+  padding-left: 45px;
+  position: relative;
+}
+
+.hotel-filters input[type="checkbox"] + label::before {
+  content: "\2610";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 26px;
+  font-family: "symbols-sedona";
+}
+
+.infra {
+  width: 120px;
+  float: left;
+  margin: 25px 70px;
+  line-height: 50px;
 }
 
 .accom {
-  width: 100px;
+  width: 120px;
+  float: left;
   margin: 25px 70px;
+  line-height: 50px;
 }
 
+/* Стили для слайдера */
+
 .filter-range {
+  float: right;
   width: 330px;
   display: inline-block;
   vertical-align: top;
-  margin: 25px 70px;
+  margin: 40px 70px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -426,52 +497,63 @@ footer div {
   background: #ffffff;
 }
 
-/*
-.filters {
-  height: 562px;
-  background-color: #ffb458;
-}
-
 .sorted-hotels {
-  background-color: white;
+  position: relative;
 }
 
-.next {
-  float: right;
+.sorted-hotels b {
+  display: inline-block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 30px 40px 30px 70px;
+  vertical-align: middle;
 }
 
-.previous {
-  float:  right;
+.sorted-hotels span,
+.sorted-hotels a {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 30px 15px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.main-picture-decoration {
-  height: 57px;
-  background-color: #458855;
+.sorted-hotels a {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
-.promo {
-  background-color: #7590f3;
+.sorted-hotels span:nth-child(3) {
+  color: #81b3d2;
 }
 
-.hotel img {
-  float: left;
+.sorted-hotels a:active {
+  color: #81b3d2;
 }
 
-.rating {
-  float: right;
+.sorted-hotels a:hover {
+  color: #81b3d2;
+  border-bottom: 1px dashed #81b3d2;
 }
 
-.hotel1,
-.hotel3 {
-  background-color: #91f1e0;
+.buttons {
+  display: inline-block;
+  position: absolute;
+  right: 70px;
+  top: 30px;
 }
 
-.hotel2 {
-  background-color: #d2d3f4;
+.hotel {
+  position: relative;
 }
 
-footer {
-  background-color: pink;
+.hotel-image,
+.hotel-booking {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-*/
+.hotel-booking p {
+  text-align: left;
+}
